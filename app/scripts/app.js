@@ -9,12 +9,8 @@
   .config(function ($routeProvider) {
     $routeProvider
       .when('/', {
-        templateUrl: 'views/login.html',
-        controller: 'LoginCtrl'
-      })
-      .when('/register', {
-        templateUrl: 'views/registration.html',
-        controller: 'RegistrationCtrl'
+        templateUrl: 'views/forgot.html',
+        controller: 'ForgotCtrl'
       })
       .when('/forgot/:retry?', {
         templateUrl: 'views/forgot.html',
