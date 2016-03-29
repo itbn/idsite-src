@@ -38,9 +38,34 @@
 @baseFontSize: 14px;
 @boxGutter: 30px;
 
+html {
+  position: relative;
+  min-height: 100%;
+}
+body {
+  margin: 0 0 60px; /* bottom = footer height */
+}
+footer {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 60px;
+  width: 100%;
+  background: #00273E;
+
+  #footerInside {
+    padding: 0 30px;
+  }
+
+  p {
+    color: #ffffff;
+    margin: 18px 0px;
+  }
+}
+
 html,body
 {
-  height: 100%;
+  //height: 100%;
 
   @media (max-width: @screen-xs-max){
     padding: 0 4px;
@@ -67,11 +92,10 @@ p{
 }
 
 .logo-container{
-  margin: 34px auto 25px auto;
+  margin: 34px 0 25px 30px;
   display: block;
 }
 .logo{
-  margin: 0 auto;
   display: block;
 }
 

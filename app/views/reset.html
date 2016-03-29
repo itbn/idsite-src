@@ -13,16 +13,19 @@
         </p>
         <p>&nbsp;</p>
       </div>
-      <div wd-success ng-show="status==='success'">
-        <p>
-          <span>You may now </span>
-          <a href="#/">log in</a>
-        </p>
-        <p>&nbsp;</p>
-      </div>
       <div ng-show="error" class="alert alert-danger">
         <p><strong>The error was:</strong></p>
         <p>{{error}}</p>
+      </div>
+
+      <div>
+        <p>Password Requirements:</p>
+        <ul>
+          <li>One</li>
+          <li>Two</li>
+          <li>Three</li>
+          <li>Four</li>
+        </ul>
       </div>
 
       <form class="reset-form form-horizontal sp-form" role="form" ng-show="status=='verified'" ng-submit="submit()">
