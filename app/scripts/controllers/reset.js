@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('stormpathIdpApp')
-  .controller('ResetCtrl', function ($scope,Stormpath,$location) {
+  .controller('ResetCtrl', function ($scope,Stormpath,$location, $http, $routeParams) {
 
     $scope.status = 'loading';
 
@@ -40,7 +40,29 @@ angular.module('stormpathIdpApp')
           $scope.unknownError = String(err.userMessage || err.developerMessage || err);
         }else{
           $scope.status = 'success';
+          $scope.updateMWS();
         }
       });
     };
+    
+    $scope.updateMWS = function(){
+      console.info($routeParams);
+      console.info($routeParams.jwt);
+      
+      $http({
+        method: 'POST',
+        url: 'https://mws.stage.kroll.com/api/v1/passwordUpdate',
+        data: {
+          'jwt': $routeParams.jwt,
+          'password': $scope.fields.password.value
+        }
+      }).then(function successCallback(response) {
+          console.info("good");
+          console.info(response);
+        }, function errorCallback(response) {
+          console.info("bad");
+          console.info(response);
+        });
+    };
+    
   });
