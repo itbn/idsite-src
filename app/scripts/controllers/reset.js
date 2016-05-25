@@ -46,8 +46,8 @@ angular.module('stormpathIdpApp')
     };
     
     $scope.updateMWS = function(){
-      console.info($routeParams);
-      console.info($routeParams.jwt);
+      
+      return;
       
       $http({
         method: 'POST',
