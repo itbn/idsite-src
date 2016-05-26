@@ -2,17 +2,17 @@
   <div class="box row">
     <div class="col-sm-12">
       <div class="header">
-        <span ng-show="status=='verified'">Password Reset</span>
+        <span ng-show="status=='verified'">Set Password</span>
         <span ng-show="status=='failed'">Sorry! Something went wrong.</span>
-        <span ng-show="status=='success'">You have successfully changed your password.</span>
+        <span ng-show="status=='success'">You have successfully set your password.</span>
       </div>
       <div ng-show="status=='success'">
-        <p>The password for this account was successfully reset.  Please use this new password to log into the mobile app.</p>
+        <p>The password for this account was successfully set.  Please use this password to log into the mobile app.</p>
         <br />
       </div>
       <div ng-show="status=='failed'">
         <p>
-          <span>You will need to make a new password reset request.</span>
+          <span>You will need to make a new password request.</span>
           <a href="#/forgot">Click here to try again</a>
         </p>
         <p>&nbsp;</p>
