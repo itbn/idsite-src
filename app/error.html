@@ -10,12 +10,39 @@
     <link rel="stylesheet" href="styles/main.css">
   </head>
   <body>
-    <div class="container text-center">
-      <p>&nbsp;</p>
-      <p>&nbsp;</p>
-      <h3 wd-error-message>Sorry, an error has occurred</h3>
-      <p>&nbsp;</p>
-      <p>Please contact the owner of this site for assistance</p>
+    <div class="logo-container">
+      <img class="logo img-responsive" src="https://www.idshield.com/sites/all/themes/idshield/logo.png" />
     </div>
+    <div class="container" ng-controller="ErrorCtrl" ng-cloak>
+      <div ng-show="inError" ng-include="'views/error.html'"></div>
+      <div ng-hide="inError" ng-view="">
+        <!-- this will be replaced a the view, as determined by the route config in app.js -->
+      </div>
+    </div>
+    <div class="container text-center">
+      <div class="view error-view">
+        <div class="box row">
+          <div class="col-sm-12">
+            <h2 class="text-center">Oops!-One of two things happened:</h2>
+            <hr />
+            <div class="alert alert-warning">
+              <p>The "Set Password" link we sent to you expired. (It's valid for only 24 hours.)</p>
+              <p>or</p>
+              <p>You've already used the link provided to set your password. The link is valid for only one use.</p>
+            </div>
+            <div>
+              <p>If you need to set your password again, please use the "Forgot Password" button in the IDShield mobile app.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer>
+      <div id="footerInside">
+        <div>
+          <p>Copyright &copy; 2016 Kroll</p>
+        </div>
+      </div>
+    </footer>
   </body>
 </html>
