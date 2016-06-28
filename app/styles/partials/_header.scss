@@ -24,7 +24,7 @@ header {
 //Shrinks the navbar image on smaller screens:
 
 @media screen and (max-width: 767px) {
-  img.navbar-brand {
+  header img.navbar-brand {
     height: $headerImgHeightSmall;
     margin-left: $headerLinksMediaQueryMargin;
   }

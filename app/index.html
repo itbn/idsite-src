@@ -89,11 +89,13 @@
 
 
 
-    <div class="container" ng-controller="ErrorCtrl" ng-cloak>
-      <div ng-show="inError" ng-include="'views/error.html'"></div>
-      <div ng-hide="inError" ng-view="">
-        <!-- this will be replaced a the view, as determined by the route config in app.js -->
-      </div>
+    <div class="container main-body" ng-controller="ErrorCtrl" ng-cloak>
+      <!-- <div class="jumbotron"> -->
+        <div ng-show="inError" ng-include="'views/error.html'"></div>
+        <div ng-hide="inError" ng-view="">
+          <!-- this will be replaced a the view, as determined by the route config in app.js -->
+        </div>
+      <!-- </div> -->
     </div>
 
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
@@ -138,15 +140,8 @@
     <!-- <script src="vendor/sinon-1.9.1.js"></script> -->
     <!-- <script src="scripts/app-mock.js"></script> -->
 
-    <!-- endbuild -->
-    <script type="text/javascript">
-      (function() {
-       var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
-       po.src = 'https://apis.google.com/js/client:plusone.js';
-       var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
-     })();
-    </script>
-    <footer>
+
+    <!-- <footer> -->
       <nav class="navbar-default">
         <main id="footerContent">
           <div class="container">
@@ -173,6 +168,16 @@
           </div>
         </main>
       </nav>
-    </footer>
+    <!-- </footer> -->
+
+    <!-- endbuild -->
+    <script type="text/javascript">
+      (function() {
+       var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+       po.src = 'https://apis.google.com/js/client:plusone.js';
+       var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+     })();
+    </script>
+
   </body>
 </html>
