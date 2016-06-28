@@ -51,6 +51,11 @@ module.exports = function (grunt) {
         files: ['<%= yeoman.app %>/styles/{,*/}*.{less,css}'],
         tasks: ['less','autoprefixer']
       },
+      sass: {
+        files: ['<%= yeoman.app %>/styles/{,*/}*.{scss,css}'],
+        tasks: ['sass','autoprefixer']
+
+      },
       gruntfile: {
         files: ['Gruntfile.js']
       },
@@ -100,6 +105,15 @@ module.exports = function (grunt) {
       dist: {
         options: {
           base: '<%= yeoman.dist %>'
+        }
+      }
+    },
+
+    sass: {
+      dist: {
+        files: {
+          '.tmp/styles/sso-styles.css': '<%= yeoman.app %>/styles/sso-styles.scss',
+          '.tmp/styles/Kroll/main.css': '<%= yeoman.app %>/styles/Kroll/main.scss'
         }
       }
     },
@@ -361,6 +375,7 @@ module.exports = function (grunt) {
       server: [
         'copy:less',
         'less',
+        'sass',
         'includes:html'
       ],
       test: [
@@ -368,6 +383,7 @@ module.exports = function (grunt) {
       ],
       dist: [
         'copy:less',
+        'sass',
         'less',
         'includes:html',
         'imagemin',

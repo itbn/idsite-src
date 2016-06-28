@@ -1,0 +1,7 @@
+@import "../variables/variables";
+@import "partials/footer";
+@import "partials/header";
+
+.jumbotron p, span, section, legend {
+  color: $krollGray !important;
+}

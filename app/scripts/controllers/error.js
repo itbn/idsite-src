@@ -5,6 +5,6 @@ angular.module('stormpathIdpApp')
     $scope.errors = Stormpath.errors;
     $scope.inError = false;
     $scope.$watchCollection('errors',function(){
-      $scope.inError = $scope.errors.length > 0;
+      // $scope.inError = $scope.errors.length > 0;
     });
   });

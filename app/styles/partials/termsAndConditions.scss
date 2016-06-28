@@ -1,0 +1,55 @@
+#termsAndConditions {
+  color: #707070;
+  &, a, p {
+    font-size: 20px;
+  }
+  li {
+    text-align: left;
+    ol li {
+      list-style-type : upper-alpha;
+    }
+    ol.misc-privacy-policy li {
+      list-style-type : decimal;
+    }
+  }
+  ul {
+    list-style-type: disc;
+  }
+}
+
+.termsAndConditionsBold {
+    font-weight: bold;
+    margin-bottom: 15%;
+}
+
+
+//JAMES: I'm not sure what all of this was from. But it wasn't being used by the page so I commented it out. 
+// .entireTermsAndConditionsContent {
+//     color: #707070;
+// }
+
+
+//
+// //ol = upper alpha; line-height: 14.5
+// .termsAndConditionsH2 {
+//     color: #707070;
+//     text-decoration: underline;
+//     line-height: 1.6;
+//     font-family: Georgia;
+// }
+//
+// .termsAndConditionsParas {
+//     font-size: 23px;
+//     color: #707070;
+//     line-height: 1.6;
+//     display: inline;
+// }
+//
+// .underline {
+//     text-decoration: underline;
+// }
+//
+// .termsAndConditionsH3 {
+//     line-height: 1.6;
+//     font-size: 30px;
+// }

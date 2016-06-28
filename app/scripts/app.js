@@ -28,6 +28,24 @@
         templateUrl: 'views/unverified.html',
         controller: 'UnverifiedCtrl'
       })
+
+      .when('/contact-us', {
+        templateUrl: 'views/contact.html',
+        controller: ''
+      })
+      .when('/terms-and-conditions', {
+        templateUrl: 'views/terms-and-conditions.html',
+        controller: ''
+      })
+      .when('/privacy-policy', {
+        templateUrl: 'views/privacy-policy.html',
+        controller: ''
+      })
+      .when('/browser', {
+        templateUrl: 'views/browser.html',
+        controller: ''
+      })
+
       .otherwise({
         redirectTo: '/'
       });
