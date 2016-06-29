@@ -4,7 +4,7 @@
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
 <!--[if gt IE 8]><!-->
 <html class="no-js" ng-app="stormpathIdpApp"> <!--<![endif]-->
-  <head>
+  <head ng-controller="linkElement as link" ng-init="link.getData()">
     <meta charset="utf-8">
     <title>Login</title>
     <meta name="description" content="">
@@ -13,10 +13,11 @@
     <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
     <!-- build:css({.tmp,app}) styles/main.css -->
+    <link rel="shortcut icon" type="image/ico" data-ng-href={{link.styles.faviconUrl}}>
 
     <link rel="stylesheet" href="styles/main.css">
     <link rel="stylesheet" href="styles/sso-styles.css">
-    <link rel="stylesheet" href="{{link.url || 'styles/Kroll/main.css'}}">
+    <link rel="stylesheet" data-ng-href="{{link.url || 'styles/Kroll/main.css'}}">
 
     <!-- endbuild -->
 
@@ -68,7 +69,7 @@
                     <span class="icon-bar"></span>
                 </button>
 
-                <img src="{{loadBrandingService.logoUrl || 'images/Kroll/kroll_logo.png'}}" class="navbar-brand"/>
+                <img ng-src="{{loadBrandingService.logoUrl || 'images/Kroll/kroll_logo.png'}}" class="navbar-brand"/>
             </div>
 
             <div class="collapse navbar-collapse">
@@ -118,6 +119,8 @@
 
     <!-- build:js({.tmp,app}) scripts/app.js -->
     <script src="scripts/app.js"></script>
+    <script src="scripts/services/branding.js"></script>
+    <script src="scripts/controllers/link.js"></script>
     <script src="scripts/controllers/login.js"></script>
     <script src="scripts/controllers/registration.js"></script>
     <script src="scripts/controllers/forgot.js"></script>
